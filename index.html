@@ -1,1 +1,427 @@
-<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>vue_project</title><script defer="defer" src="/js/chunk-vendors.bf2e2091.js"></script><script defer="defer" src="/js/app.00eb5f6d.js"></script><link href="/css/app.2cf79ad6.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but vue_project doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div></body></html>
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="盧勁宇 - 個人履歷網站">
+    <title>盧勁宇 - 個人履歷</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 個人資訊區塊 -->
+        <header class="profile-header">
+            <div class="profile-photo">
+                <img src="assets/profile.jpg" alt="盧勁宇照片" id="profileImg">
+            </div>
+            <div class="profile-info">
+                <h1>盧勁宇</h1>
+                <h2 class="subtitle">Lu Jin Yu</h2>
+                <p class="tagline">資深軟體工程師 | 全端開發 | 醫療資訊系統專家</p>
+                <p class="profile-quote">"勇於嘗試,永遠不要輕易說不,將不可能化為可能,沒有唯一標準答案"</p>
+                <div class="contact-info">
+                    <p><i class="icon"></i> <a href="mailto:luchnwu@yahoo.com.tw">luchnwu@yahoo.com.tw</a></p>
+                    <p><i class="icon"></i> 0937-054-427</p>
+                    <p><i class="icon"></i> 台北市內湖區,台灣</p>
+                    <p><i class="icon"></i> 總年資:11~12 年(護理 9 年 + 軟體開發 3 年)</p>
+                    <p><i class="icon"></i> <a href="https://www.linkedin.com/in/%E5%8B%81%E5%AE%87-%E7%9B%A7-1b538225b/" target="_blank">LinkedIn</a></p>
+                    <p><i class="icon"></i> <a href="https://github.com/luchnwu" target="_blank">GitHub: luchnwu</a></p>
+                    <p><i class="icon"></i> <a href="https://pda.104.com.tw/profile/share/gx81eReaUEyCrYaHbvbPvjeDXiOtfIaG" target="_blank">104 履歷</a></p>
+                </div>
+            </div>
+        </header>
+
+        <!-- 關於我 -->
+        <section class="section">
+            <h2 class="section-title">關於我 About Me</h2>
+            <div class="section-content">
+                <p class="about-text">
+                    擁有 <strong>9 年開刀房專科護理師</strong>經驗,專精於神經外科手術助手。
+                    於 2022 年成功轉職為軟體工程師,至今累積 <strong>3 年軟體開發經驗</strong>,
+                    其中 <strong>2 年醫療資訊系統開發</strong>經驗,目前於電信業擔任資深軟體工程師。
+                    擅長整合醫療專業知識與軟體技術,開發實用的醫療協助軟體與企業應用系統。
+                </p>
+                <p class="about-text">
+                    具備全端開發能力與<strong>跨語言學習能力</strong>,熟悉 C#、Python、Go、Node.js 等多種程式語言。
+                    在軟體工作中已參與<strong>多個專案</strong>,包含舊案新需求調整、新功能模組建置,
+                    以及前後端分離架構的新軟體設計規劃與開發建置。
+                    善於運用 <strong>Cursor AI 等 AI 輔助開發工具</strong>提升開發效率,
+                    快速掌握陌生專案架構,將複雜的業務需求轉化為可執行的技術方案。
+                </p>
+                <p class="about-text">
+                    對各種類別的軟體開發皆有高度興趣,從醫療資訊系統到企業考勤系統、
+                    從傳統應用到 POC 概念驗證,都能快速適應並產出成果。
+                    樂於分享技術經驗,在團隊內部推廣 AI 輔助開發的最佳實踐。
+                </p>
+                <div class="personality-tags">
+                    <span class="tag">勇於挑戰</span>
+                    <span class="tag">樂於助人</span>
+                    <span class="tag">熱情且極具行動力</span>
+                    <span class="tag">理性面對感性對人</span>
+                    <span class="tag">快速學習</span>
+                    <span class="tag">跨領域整合</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 工作經驗 -->
+        <section class="section">
+            <h2 class="section-title">工作經驗 Work Experience</h2>
+            <div class="section-content">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>資深軟體工程師 Senior Software Engineer</h3>
+                        <span class="period">2024/12 - 現在</span>
+                    </div>
+                    <h4 class="company">電信相關業(500 人以上)| 台北市信義區</h4>
+                    <ul class="description">
+                        <li>職位:資深工程師</li>
+                        <li>專注於軟體程式設計與系統開發</li>
+                        <li>技術棧:C#, ASP.NET Core, Python, Go, Node.js, Docker, Git, PostgreSQL, Cursor AI</li>
+                    </ul>
+                    
+                    <div class="project-highlight">
+                        <h5>🚀 重點專案成就</h5>
+                        
+                        <div class="mini-project">
+                            <h6>🤖 機器人軟體電話 POC 跨語言開發</h6>
+                            <p class="project-period">2025/07 - 進行中</p>
+                            <p class="project-description">
+                                <strong>專案背景:</strong>開發機器人軟體電話功能的概念驗證(POC),需要評估 Python、Go、Node.js 等多種技術方案。
+                            </p>
+                            <p class="project-description">
+                                <strong>技術挑戰:</strong>身為 C# 工程師,需要在短時間內跨語言學習並完成功能驗證。
+                                探索 Python 的快速原型能力、Go 的效能與並行模型、Node.js 的非同步處理等不同技術特性。
+                            </p>
+                            <p class="project-description">
+                                <strong>開發策略:</strong>運用 <strong>Cursor AI</strong> 加速跨語言學習,減少語法糾結時間,專注於功能驗證與問題解決。
+                                體會到程式語言只是工具,核心是解決問題的能力。
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag mini">C#</span>
+                                <span class="tech-tag mini">Python</span>
+                                <span class="tech-tag mini">Go</span>
+                                <span class="tech-tag mini">Node.js</span>
+                                <span class="tech-tag mini">POC</span>
+                                <span class="tech-tag mini">Cursor AI</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mini-project">
+                            <h6>⏰ 考勤系統專案接手與優化</h6>
+                            <p class="project-period">2025/01 - 進行中</p>
+                            <p class="project-description">
+                                <strong>專案背景:</strong>接手陌生的考勤系統專案,面對不熟悉的程式架構與業務邏輯,需要快速理解並進行功能開發。
+                            </p>
+                            <p class="project-description">
+                                <strong>解決方案:</strong>運用 <strong>Cursor AI</strong> 輔助開發,快速掌握專案架構與脈絡,從「焦慮查 code」轉換到「冷靜解問題」。
+                                同時規劃 Docker 化方案,確保部署更具彈性。
+                            </p>
+                            <p class="project-description">
+                                <strong>成果亮點:</strong>大幅縮短學習曲線,提升開發效率,精準完成需求落地,並在團隊內部分享 AI 輔助開發經驗。
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag mini">C#</span>
+                                <span class="tech-tag mini">Cursor AI</span>
+                                <span class="tech-tag mini">考勤系統</span>
+                                <span class="tech-tag mini">Docker</span>
+                                <span class="tech-tag mini">架構分析</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>程式設計師 Software Developer</h3>
+                        <span class="period">2023/01 - 2024/12(2 年)</span>
+                    </div>
+                    <h4 class="company">馬雅資訊股份有限公司(電腦軟體服務業,30~100 人)| 台北市松山區</h4>
+                    <ul class="description">
+                        <li>職位:軟體工程師,專注於軟體設計</li>
+                        <li>參與四個以上專案,包含舊案新需求調整與新功能模組建置</li>
+                        <li>負責前後端分離架構的新軟體設計規劃與開發建置</li>
+                        <li>技術棧:ASP.NET Core, Spring Boot, Vue.js, React, TypeScript, PostgreSQL, Oracle SQL</li>
+                    </ul>
+                    
+                    <div class="project-highlight">
+                        <h5> 主要專案經歷</h5>
+                        
+                        <div class="mini-project">
+                            <h6> 護理資訊軟體開發(Vue 3 版本)</h6>
+                            <p class="project-period">2024/03 - 2024/12 | 專案角色:PG(程式設計師)</p>
+                            <p class="project-description">
+                                <strong>系統概述:</strong>護理醫療作業網站平台,包含基礎 5 個到進階 10 個醫療紀錄與輔助相關模組,
+                                提供護理人員常規作業使用。主要模組包括 BCMA(條碼給藥系統)、ISBAR(交班報告)、CarePlan(照護計畫)等。
+                            </p>
+                            <p class="project-description">
+                                <strong>工作內容:</strong>系統優化和開發,負責全端的程式撰寫,開發護理醫療作業網站平台。
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag mini">Vue 3</span>
+                                <span class="tech-tag mini">TypeScript</span>
+                                <span class="tech-tag mini">ASP.NET Core</span>
+                                <span class="tech-tag mini">PostgreSQL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mini-project">
+                            <h6> 護理資訊軟體開發(React 版本)</h6>
+                            <p class="project-period">2023/11 - 2024/03 | 專案角色:PG(程式設計師)</p>
+                            <p class="project-description">
+                                <strong>系統概述:</strong>護理醫療作業網站平台,包含基礎 5 個到進階 10 個醫療紀錄與輔助相關模組,
+                                提供護理人員常規作業使用。
+                            </p>
+                            <p class="project-description">
+                                <strong>工作內容:</strong>系統開發,負責全端的程式撰寫,開發護理醫療作業網站平台。
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag mini">React</span>
+                                <span class="tech-tag mini">TypeScript</span>
+                                <span class="tech-tag mini">ASP.NET Core</span>
+                                <span class="tech-tag mini">PostgreSQL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mini-project">
+                            <h6> 護理資訊軟體維護與模組開發</h6>
+                            <p class="project-period">2023/01 - 2023/10 | 專案角色:PG(程式設計師)</p>
+                            <p class="project-description">
+                                <strong>系統概述:</strong>包含 15 個醫療紀錄與輔助相關模組,提供護理人員常規作業使用。
+                            </p>
+                            <p class="project-description">
+                                <strong>工作內容:</strong>維護舊系統,並依需求建置新功能模組。
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag mini">ASP.NET MVC</span>
+                                <span class="tech-tag mini">Razor Page</span>
+                                <span class="tech-tag mini">jQuery</span>
+                                <span class="tech-tag mini">Oracle SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>護理師 Registered Nurse</h3>
+                        <span class="period">2013/08 - 2022/12(9 年 5 個月)</span>
+                    </div>
+                    <h4 class="company">振興財團法人醫院(醫院,500 人以上)| 台北市北投區</h4>
+                    <ul class="description">
+                        <li>專科護理師 - 神經外科手術助手(開刀房)</li>
+                        <li>執行醫療行為協助相關業務,管理 4 人以下</li>
+                        <li>專業領域:手術室護理、手術跟刀</li>
+                        <li>擁有豐富的醫療現場經驗,為轉職軟體開發奠定醫療領域專業基礎</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 學歷 -->
+        <section class="section">
+            <h2 class="section-title">學歷 Education</h2>
+            <div class="section-content">
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3>高雄醫學大學 Kaohsiung Medical University</h3>
+                        <span class="period">2008/09 - 2012/06</span>
+                    </div>
+                    <p class="degree">護理學系 學士 Bachelor of Nursing</p>
+                    <ul class="description">
+                        <li>具備完整的醫療護理專業訓練</li>
+                        <li>為後續從事醫療資訊系統開發奠定堅實的醫療專業基礎</li>
+                        <li>能深入理解醫護人員的實際需求,開發更貼近實務的解決方案</li>
+                    </ul>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3>達內教育 Tedu Education</h3>
+                        <span class="period">2022/06 - 2022/10</span>
+                    </div>
+                    <p class="degree">Java 企業級應用軟件工程師課程</p>
+                    <ul class="description">
+                        <li><strong>Java 基礎</strong>:掌握 Java 核心語法與物件導向程式設計</li>
+                        <li><strong>面向物件程式設計</strong>:完成飛機射擊大戰專案</li>
+                        <li><strong>JavaEE</strong>:開發學子商城專案,學習企業級應用開發</li>
+                        <li><strong>Spring Boot</strong>:建立微服務架構,開發項目問答系統</li>
+                        <li>為轉職軟體工程師做好充分的技術準備</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技能 -->
+        <section class="section">
+            <h2 class="section-title">專業技能 Skills</h2>
+            <div class="section-content">
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>前端技術 Frontend</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Vue.js</span>
+                            <span class="skill-tag">Vue 3</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">jQuery</span>
+                            <span class="skill-tag">ASP.NET Razor Page</span>
+                            <span class="skill-tag">ASP.NET Core Razor</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>後端技術 Backend</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">ASP.NET Core</span>
+                            <span class="skill-tag">ASP.NET Core API</span>
+                            <span class="skill-tag">ASP.NET Core MVC</span>
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">Spring Boot</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">MyBatis Plus</span>
+                            <span class="skill-tag">Entity Framework Core</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>資料庫 Database</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">MS SQL</span>
+                            <span class="skill-tag">Oracle SQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>開發工具 Tools</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">Visual Studio</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Cursor AI</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>辦公室應用 Office</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Word</span>
+                            <span class="skill-tag">PowerPoint</span>
+                            <span class="skill-tag">Excel</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>專業領域 Domain</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">醫療資訊系統</span>
+                            <span class="skill-tag">護理資訊平台</span>
+                            <span class="skill-tag">全端開發</span>
+                            <span class="skill-tag">RWD 響應式設計</span>
+                            <span class="skill-tag">AI 輔助開發</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 個人專案 -->
+        <section class="section">
+            <h2 class="section-title">個人專案 Personal Projects</h2>
+            <div class="section-content">
+                <div class="project-item">
+                    <h3> TaskManagement - 任務管理系統</h3>
+                    <p class="project-period">2024/09 - 進行中 | Side Project</p>
+                    <p class="project-description">
+                        個人專案:任務管理系統,用於實踐與提升全端開發技能。
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Full Stack</span>
+                        <span class="tech-tag">Task Management</span>
+                    </div>
+                    <a href="https://github.com/luchnwu/TaskManagement" class="project-link" target="_blank">查看專案 </a>
+                </div>
+
+                <div class="project-item">
+                    <h3> 個人 GitHub 專案集</h3>
+                    <p class="project-description">
+                        更多個人學習與實驗性專案,展示各種技術棧的應用。
+                    </p>
+                    <a href="https://github.com/luchnwu/luchnwu" class="project-link" target="_blank">查看更多專案 </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 語言能力 -->
+        <section class="section">
+            <h2 class="section-title">語言能力 Languages</h2>
+            <div class="section-content">
+                <div class="language-grid">
+                    <div class="language-item">
+                        <h4>中文</h4>
+                        <p>母語 Native</p>
+                    </div>
+                    <div class="language-item">
+                        <h4>英文 English</h4>
+                        <p>略懂 Basic</p>
+                        <p class="lang-detail">聽/略懂 說/略懂 讀/略懂 寫/略懂</p>
+                    </div>
+                    <div class="language-item">
+                        <h4>台語 Taiwanese</h4>
+                        <p>中等 Intermediate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 求職條件 -->
+        <section class="section">
+            <h2 class="section-title">求職條件 Job Preferences</h2>
+            <div class="section-content">
+                <div class="job-preferences">
+                    <div class="preference-item">
+                        <h4>希望職位</h4>
+                        <p>軟體工程師、軟體架構師、Internet 程式設計師、前端工程師、系統分析師</p>
+                    </div>
+                    <div class="preference-item">
+                        <h4>工作性質</h4>
+                        <p>全職工作、兼職工作</p>
+                    </div>
+                    <div class="preference-item">
+                        <h4>上班時段</h4>
+                        <p>日班</p>
+                    </div>
+                    <div class="preference-item">
+                        <h4>希望地點</h4>
+                        <p>台北市</p>
+                    </div>
+                    <div class="preference-item">
+                        <h4>遠端工作</h4>
+                        <p> 對遠端工作有意願</p>
+                    </div>
+                    <div class="preference-item">
+                        <h4>希望待遇</h4>
+                        <p>月薪 60,000 元以上</p>
+                    </div>
+                    <div class="preference-item">
+                        <h4>可上班日</h4>
+                        <p>年後可上班</p>
+                    </div>
+                    <div class="preference-item">
+                        <h4>希望產業</h4>
+                        <p>軟體及網路相關業、醫療服務業</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 頁尾 -->
+        <footer class="footer">
+            <p>&copy; 2025 盧勁宇. All rights reserved.</p>
+            <p>Last updated: <span id="lastUpdate"></span></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

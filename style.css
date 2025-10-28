@@ -1,0 +1,512 @@
+/* 全域樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --bg-light: #f9fafb;
+    --border-color: #e5e7eb;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Microsoft JhengHei', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* 個人資訊區塊 */
+.profile-header {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.profile-photo {
+    flex-shrink: 0;
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+}
+
+.profile-info h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.profile-quote {
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: var(--bg-light);
+    border-left: 3px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-light);
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.icon {
+    font-size: 1.2rem;
+}
+
+/* 區塊樣式 */
+.section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.section-content {
+    color: var(--text-dark);
+}
+
+.about-text {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.personality-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.personality-tags .tag {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 工作經驗 */
+.experience-item {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.experience-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.experience-header h3 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+}
+
+.period {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.company {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.description {
+    list-style-position: inside;
+    color: var(--text-light);
+}
+
+.description li {
+    margin-bottom: 8px;
+}
+
+/* 專案亮點區塊 */
+.project-highlight {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.project-highlight h5 {
+    color: var(--primary-color);
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+}
+
+.mini-project {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.mini-project:last-child {
+    margin-bottom: 0;
+}
+
+.mini-project h6 {
+    color: var(--text-dark);
+    font-size: 1.05rem;
+    margin-bottom: 5px;
+}
+
+.mini-project .project-period {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.mini-project .project-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.tech-tag.mini {
+    font-size: 0.8rem;
+    padding: 3px 10px;
+}
+
+/* 學歷 */
+.education-item {
+    margin-bottom: 20px;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.education-header h3 {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+}
+
+.degree {
+    color: var(--text-light);
+}
+
+.education-item ul.description {
+    margin-top: 10px;
+    list-style-position: inside;
+    color: var(--text-light);
+}
+
+.education-item ul.description li {
+    margin-bottom: 5px;
+}
+
+/* 技能 */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-category h4 {
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+/* 專案 */
+.project-item {
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.project-item h3 {
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.project-period {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.project-description strong {
+    color: var(--text-dark);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.tech-tag {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    border: 1px solid var(--border-color);
+}
+
+.project-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: var(--secondary-color);
+}
+
+/* 認證與成就 */
+.achievements-list {
+    list-style: none;
+    padding: 0;
+}
+
+.achievements-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.achievements-list li:last-child {
+    border-bottom: none;
+}
+
+.achievements-list strong {
+    color: var(--text-dark);
+    font-size: 1.05rem;
+}
+
+.achievements-list .period {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+/* 語言能力 */
+.language-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.language-item {
+    padding: 20px;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.language-item h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.language-item p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.lang-detail {
+    font-size: 0.85rem !important;
+    margin-top: 5px;
+}
+
+/* 求職條件 */
+.job-preferences {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.preference-item {
+    padding: 15px;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.preference-item h4 {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.preference-item p {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* 頁尾 */
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-info h1 {
+        font-size: 2rem;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .education-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 動畫效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    animation: fadeIn 0.6s ease-out;
+}
