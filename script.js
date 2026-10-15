@@ -1,20 +1,40 @@
-// 設定最後更新日期
+// 履歷互動
 document.addEventListener('DOMContentLoaded', function() {
-    const lastUpdateElement = document.getElementById('lastUpdate');
-    if (lastUpdateElement) {
-        const today = new Date();
-        const formattedDate = today.toLocaleDateString('zh-TW', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    // 主題切換：sky(晨光) / night(墨綠金)
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const themeNames = { sky: '晨光', night: '夜幕' };
+    function renderThemeToggle() {
+        const next = root.getAttribute('data-theme') === 'night' ? 'sky' : 'night';
+        themeToggle.querySelector('.theme-toggle-label').textContent = themeNames[next];
+        themeToggle.setAttribute('aria-label', '切換為' + themeNames[next] + '主題');
+    }
+    if (themeToggle) {
+        renderThemeToggle();
+        themeToggle.addEventListener('click', function() {
+            const next = root.getAttribute('data-theme') === 'night' ? 'sky' : 'night';
+            root.setAttribute('data-theme', next);
+            window.resumeTheme.choose(next);
+            renderThemeToggle();
         });
-        lastUpdateElement.textContent = formattedDate;
+        themeToggle.title = '依台北日出、日落自動切換；手動選擇維持至下一次日出或日落';
+        function syncTheme() {
+            root.setAttribute('data-theme', window.resumeTheme.current());
+            renderThemeToggle();
+        }
+        setInterval(syncTheme, 15000);
+        document.addEventListener('visibilitychange', function () {
+            if (!document.hidden) syncTheme();
+        });
     }
 
     // 個人照片錯誤處理
     const profileImg = document.getElementById('profileImg');
     if (profileImg) {
         profileImg.onerror = function() {
+            this.onerror = null;
             // 如果圖片載入失敗，使用預設圖片或隱藏
             this.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="150" height="150"%3E%3Crect fill="%232563eb" width="150" height="150"/%3E%3Ctext fill="white" font-size="60" font-family="Arial" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3E盧%3C/text%3E%3C/svg%3E';
         };
@@ -23,37 +43,47 @@ document.addEventListener('DOMContentLoaded', function() {
     // 平滑滾動效果
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.getElementById(this.hash.slice(1));
             if (target) {
+                e.preventDefault();
+                history.pushState(null, '', this.hash);
                 target.scrollIntoView({
-                    behavior: 'smooth',
+                    behavior: reducedMotion.matches ? 'instant' : 'smooth',
                     block: 'start'
                 });
             }
         });
     });
 
-    // 區塊進入視窗時的動畫效果
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
+    // 章節導覽：標示目前閱讀中的區塊
+    const tocLinks = document.querySelectorAll('.toc a');
+    const spy = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                tocLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                });
             }
         });
-    }, observerOptions);
+    }, { rootMargin: '-35% 0px -60% 0px' });
+    tocLinks.forEach(link => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) spy.observe(target);
+    });
 
-    document.querySelectorAll('.section').forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        observer.observe(section);
+    // 列印時展開所有專案細節，並顯示尚未捲到的區塊
+    let printDetails = [];
+    window.addEventListener('beforeprint', function() {
+        printDetails = Array.from(document.querySelectorAll('details'), d => [d, d.open]);
+        document.querySelectorAll('details').forEach(d => { d.open = true; });
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '1';
+            section.style.transform = 'none';
+        });
+    });
+    window.addEventListener('afterprint', function() {
+        printDetails.forEach(([detail, open]) => { detail.open = open; });
+        printDetails = [];
     });
 });
 
