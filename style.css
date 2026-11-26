@@ -372,10 +372,6 @@ svg {
     color: var(--text-dark);
 }
 
-.nowrap {
-    white-space: nowrap;
-}
-
 .role-sub {
     display: block;
     margin-top: 2px;
